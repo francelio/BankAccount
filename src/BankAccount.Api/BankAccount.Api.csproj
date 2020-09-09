@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <SonarQubeExclude>True</SonarQubeExclude>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Code\BankAccount\src\BankAccount.Api\BankAccount.Api.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591,1572,1571,1573,1587,1570</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="BankAccount.Api.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="8.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BankAccount.Domain\BankAccount.Domain.csproj" />
+    <ProjectReference Include="..\BankAccount.IoC\BankAccount.IoC.csproj" />
+  </ItemGroup>
+
+
+</Project>

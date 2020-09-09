@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BankAccount.Api</name>
+    </assembly>
+    <members>
+        <member name="M:BankAccount.Api.Controllers.AccountController.Deposit(BankAccount.Domain.ContextCurrentAccount.Commands.Requests.DepositCommandRequest)">
+            <summary>
+            Efetua o deposito na conta especificada
+            </summary>
+            <param name="Command">Informações da conta para deposito </param>
+            <returns>Conta e saldo</returns>
+        </member>
+        <member name="M:BankAccount.Api.Controllers.AccountController.Transfer(BankAccount.Domain.ContextCurrentAccount.Commands.Requests.TransferCommandRequest)">
+            <summary>
+            Efetua a transferencia de uma conta para a outra
+            </summary>
+            <param name="Command">Informações da conta de origem e destino </param>
+            <returns>Conta e saldo</returns>
+        </member>
+        <member name="M:BankAccount.Api.Controllers.AccountController.GetAllCurrentAccounts">
+            <summary>
+            Retorna todas as contas cadastradas
+            </summary>
+            <returns>Retorna a lista de constas cadastradas</returns>
+        </member>
+    </members>
+</doc>
